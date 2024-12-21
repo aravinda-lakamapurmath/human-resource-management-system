@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            text-align: center;
+            padding: 30px;
+            max-width: 1000px;
+            margin: 40px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        table th {
+            background-color: #007bff;
+            color: white;
+        }
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .btn {
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .btn.edit {
+            background-color: #ffc107;
+        }
+        .btn.process {
+            background-color: #28a745;
+        }
+        .btn-back {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #6c757d;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+    <title>Payroll Management</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Payroll Management</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Employee Name</th>
+                    <th>Salary</th>
+                    <th>Bonus</th>
+                    <th>Tax Deductions</th>
+                    <th>Net Pay</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example static rows. Replace with dynamically populated rows using API response -->
+                <tr>
+                    <td>101</td>
+                    <td>John Doe</td>
+                    <td>$5,000</td>
+                    <td>$500</td>
+                    <td>$700</td>
+                    <td>$4,800</td>
+                    <td>
+                        <div class="action-buttons">
+                            <a href="/api/hr/view-payroll?employee_id=101" class="btn">View</a>
+                            <a href="/api/hr/edit-payroll?employee_id=101" class="btn edit">Edit</a>
+                            <a href="/api/hr/process-payroll?employee_id=101" class="btn process">Process</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>Jane Smith</td>
+                    <td>$6,000</td>
+                    <td>$600</td>
+                    <td>$800</td>
+                    <td>$5,800</td>
+                    <td>
+                        <div class="action-buttons">
+                            <a href="/api/hr/view-payroll?employee_id=102" class="btn">View</a>
+                            <a href="/api/hr/edit-payroll?employee_id=102" class="btn edit">Edit</a>
+                            <a href="/api/hr/process-payroll?employee_id=102" class="btn process">Process</a>
+                        </div>
+                    </td>
+                </tr>
+                <!-- More rows here -->
+            </tbody>
+        </table>
+        <a href="hr_dashboard.html" class="btn-back">Back to Dashboard</a>
+    </div>
+</body>
+</html>

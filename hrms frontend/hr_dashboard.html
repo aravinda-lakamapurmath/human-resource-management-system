@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .dashboard__btn {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .dashboard__btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.02);
+        }
+        @media (max-width: 600px) {
+            .dashboard__btn {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+    <title>HR Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <h1>HR Dashboard</h1>
+        <a href="add_employee.html" class="dashboard__btn">Add Employee</a>
+        <a href="view_employee_details.html" class="dashboard__btn">View Employee Details</a>
+        <a href="edit_employee_details.html" class="dashboard__btn">Edit Employee Details</a>
+        <a href="list_all_employees.html" class="dashboard__btn">List All Employees</a>
+        <a href="manage_leave_requests.html" class="dashboard__btn">Manage Leave Requests</a>
+        <a href="payroll_management.html" class="dashboard__btn">Payroll Management</a>
+        <a href="performance_reviews.html" class="dashboard__btn">Performance Reviews</a>
+        <a href="hr_document_management.html" class="dashboard__btn">Document Management</a>
+        <a href="expense_claims_review.html" class="dashboard__btn">Expense Claims Review</a>
+    </div>
+</body>
+</html>

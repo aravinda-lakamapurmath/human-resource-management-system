@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            text-align: center;
+            padding: 30px;
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        table th {
+            background-color: #007bff;
+            color: white;
+        }
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .btn {
+            padding: 8px 12px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .btn.reject {
+            background-color: #dc3545;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .btn-back {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #6c757d;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+    <title>Manage Leave Requests</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Manage Leave Requests</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Request ID</th>
+                    <th>Employee Name</th>
+                    <th>Leave Type</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Reason</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example static rows. Replace with dynamically populated rows using API response -->
+                <tr>
+                    <td>101</td>
+                    <td>John Doe</td>
+                    <td>Annual Leave</td>
+                    <td>2024-12-25</td>
+                    <td>2024-12-30</td>
+                    <td>Family Vacation</td>
+                    <td>Pending</td>
+                    <td>
+                        <div class="action-buttons">
+                            <a href="/api/hr/approve-leave?request_id=101" class="btn">Approve</a>
+                            <a href="/api/hr/reject-leave?request_id=101" class="btn reject">Reject</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>102</td>
+                    <td>Jane Smith</td>
+                    <td>Sick Leave</td>
+                    <td>2024-12-20</td>
+                    <td>2024-12-22</td>
+                    <td>Medical Issues</td>
+                    <td>Pending</td>
+                    <td>
+                        <div class="action-buttons">
+                            <a href="/api/hr/approve-leave?request_id=102" class="btn">Approve</a>
+                            <a href="/api/hr/reject-leave?request_id=102" class="btn reject">Reject</a>
+                        </div>
+                    </td>
+                </tr>
+                <!-- More rows here -->
+            </tbody>
+        </table>
+        <a href="hr_dashboard.html" class="btn-back">Back to Dashboard</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            text-align: center;
+            padding: 30px;
+            max-width: 500px;
+            margin: 40px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form input, .form select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            background-color: #f9f9f9;
+        }
+        .form input:focus, .form select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.02);
+        }
+        .navigation {
+            margin-top: 15px;
+        }
+        .navigation .btn {
+            background-color: #6c757d;
+        }
+        .navigation .btn:hover {
+            background-color: #5a6268;
+        }
+    </style>
+    <title>Add Employee</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Add New Employee</h1>
+        <form action="/api/hr/add-employee" method="POST" class="form">
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="position" placeholder="Position" required>
+            <input type="text" name="department" placeholder="Department" required>
+            <select name="status" required>
+                <option value="">Select Status</option>
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+            </select>
+            <button type="submit" class="btn">Add Employee</button>
+        </form>
+        <div class="navigation">
+            <a href="hr_dashboard.html" class="btn">Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>

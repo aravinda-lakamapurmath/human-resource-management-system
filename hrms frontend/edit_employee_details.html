@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            text-align: center;
+            padding: 30px;
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form input, .form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .btn {
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            display: inline-block;
+            margin-top: 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.02);
+        }
+        .btn-back {
+            background-color: #6c757d;
+        }
+        .btn-back:hover {
+            background-color: #5a6268;
+        }
+    </style>
+    <title>Edit Employee Details</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Employee Details</h1>
+        <form action="/api/hr/edit-employee-details" method="POST" class="form">
+            <input type="hidden" name="employee_id" value="[[employee.id]]">
+            <input type="text" name="first_name" placeholder="First Name" value="[[employee.first_name]]" required>
+            <input type="text" name="last_name" placeholder="Last Name" value="[[employee.last_name]]" required>
+            <input type="email" name="email" placeholder="Email" value="[[employee.email]]" required>
+            <input type="text" name="position" placeholder="Position" value="[[employee.position]]" required>
+            <input type="text" name="department" placeholder="Department" value="[[employee.department]]" required>
+            <select name="status" required>
+                <option value="" disabled>Select Status</option>
+                <option value="active" [[employee.status == 'active' ? 'selected' : '']]>Active</option>
+                <option value="inactive" [[employee.status == 'inactive' ? 'selected' : '']]>Inactive</option>
+            </select>
+            <button type="submit" class="btn">Save Changes</button>
+        </form>
+        <div class="navigation">
+            <a href="view_employee_details.html" class="btn btn-back">Cancel</a>
+        </div>
+    </div>
+</body>
+</html>

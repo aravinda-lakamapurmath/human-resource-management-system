@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Claim Status</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-link a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Expense Claim Status</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Claim ID</th>
+                    <th>Expense Name</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Date Submitted</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>EC-1001</td>
+                    <td>Travel</td>
+                    <td>$150.00</td>
+                    <td>Approved</td>
+                    <td>2024-12-05</td>
+                </tr>
+                <tr>
+                    <td>EC-1002</td>
+                    <td>Meals</td>
+                    <td>$50.00</td>
+                    <td>Pending</td>
+                    <td>2024-12-10</td>
+                </tr>
+                <tr>
+                    <td>EC-1003</td>
+                    <td>Supplies</td>
+                    <td>$200.00</td>
+                    <td>Rejected</td>
+                    <td>2024-12-12</td>
+                </tr>
+                <!-- Additional rows can be added dynamically -->
+            </tbody>
+        </table>
+
+        <div class="back-link">
+            <a href="employee_dashboard.html">Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-link a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Payroll History</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Pay Period</th>
+                    <th>Basic Salary</th>
+                    <th>Bonus</th>
+                    <th>Deductions</th>
+                    <th>Net Pay</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024-11-01 to 2024-11-30</td>
+                    <td>$3,000</td>
+                    <td>$300</td>
+                    <td>$150</td>
+                    <td>$3,150</td>
+                </tr>
+                <tr>
+                    <td>2024-10-01 to 2024-10-31</td>
+                    <td>$3,000</td>
+                    <td>$250</td>
+                    <td>$100</td>
+                    <td>$3,150</td>
+                </tr>
+                <tr>
+                    <td>2024-09-01 to 2024-09-30</td>
+                    <td>$3,000</td>
+                    <td>$200</td>
+                    <td>$50</td>
+                    <td>$3,150</td>
+                </tr>
+                <!-- Additional rows can be added dynamically -->
+            </tbody>
+        </table>
+
+        <div class="back-link">
+            <a href="employee_dashboard.html">Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Claims Review</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .review-expenses {
+            margin-top: 30px;
+        }
+
+        .approve-btn, .reject-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .reject-btn {
+            background-color: #f44336;
+        }
+
+        .approve-btn:hover, .reject-btn:hover {
+            opacity: 0.8;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Expense Claims Review</h1>
+        <nav>
+            <ul>
+                <li><a href="hr_dashboard.html">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="review-expenses">
+            <h2>Review Expense Claims</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Claim ID</th>
+                        <th>Employee Name</th>
+                        <th>Claim Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>EXP001</td>
+                        <td>John Doe</td>
+                        <td>2024-12-01</td>
+                        <td>$150</td>
+                        <td>Pending</td>
+                        <td>
+                            <a href="#" class="approve-btn">Approve</a>
+                            <a href="#" class="reject-btn">Reject</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>EXP002</td>
+                        <td>Jane Smith</td>
+                        <td>2024-12-02</td>
+                        <td>$200</td>
+                        <td>Pending</td>
+                        <td>
+                            <a href="#" class="approve-btn">Approve</a>
+                            <a href="#" class="reject-btn">Reject</a>
+                        </td>
+                    </tr>
+                    <!-- Additional rows as needed -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 HRMS. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

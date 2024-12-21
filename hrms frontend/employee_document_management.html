@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Document Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .file-upload {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .file-upload input[type="file"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .uploaded-documents {
+            margin-top: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-link a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Employee Document Management</h1>
+
+        <div class="file-upload">
+            <label for="document-upload">Upload New Document:</label>
+            <input type="file" id="document-upload" name="document-upload">
+        </div>
+
+        <div class="uploaded-documents">
+            <h2>Uploaded Documents</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Document Name</th>
+                        <th>Upload Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Contract_Agreement.pdf</td>
+                        <td>2024-12-01</td>
+                        <td>
+                            <a href="#">View</a> | 
+                            <a href="#">Download</a> | 
+                            <a href="#">Delete</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tax_Form_2024.pdf</td>
+                        <td>2024-11-20</td>
+                        <td>
+                            <a href="#">View</a> | 
+                            <a href="#">Download</a> | 
+                            <a href="#">Delete</a>
+                        </td>
+                    </tr>
+                    <!-- Additional rows can be added dynamically -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="back-link">
+            <a href="employee_dashboard.html">Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+
+</html>
